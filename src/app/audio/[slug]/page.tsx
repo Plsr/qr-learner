@@ -1,3 +1,6 @@
+import { getAudio } from "@/data/getAudio";
+import { notFound } from "next/navigation";
+
 export default async function Page({
   params,
 }: {
@@ -5,7 +8,11 @@ export default async function Page({
 }) {
   const slug = (await params).slug;
 
-  const audioSrc = getAudioSrc(slug);
+  const audioSrc = getAudio(slug);
+
+  if (!audioSrc) {
+    return notFound();
+  }
 
   return (
     <div>
@@ -18,11 +25,3 @@ export default async function Page({
     </div>
   );
 }
-
-const getAudioSrc = (slug: string) => {
-  if (!slug) {
-    throw new Error();
-  }
-
-  return "/bord.mp3";
-};
