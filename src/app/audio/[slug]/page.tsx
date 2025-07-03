@@ -1,3 +1,4 @@
+import { AudioPlayer } from "@/components/audioplayer";
 import { getAudio } from "@/data/getAudio";
 import { notFound } from "next/navigation";
 
@@ -15,13 +16,9 @@ export default async function Page({
   }
 
   return (
-    <div>
-      <h1>Audio Page</h1>
-      <p>This is the audio page for {slug}</p>
-      <audio controls>
-        <source src={audioSrc} type="audio/mp3" />
-        Your browser does not support this
-      </audio>
+    <div className="flex flex-col h-screen items-center justify-center bg-purple-200">
+      <h1 className="text-3xl mb-8 font-bold">{slug}</h1>
+      <AudioPlayer audioSrc={audioSrc} />
     </div>
   );
 }
