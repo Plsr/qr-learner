@@ -1,3 +1,12 @@
 {
-  "bord": "/bord.mp3"
+  "bord": "/bord.mp3",
+  "bog": "/bog.mp3",
+  "garderobe": "/garderobe.mp3",
+  "koleskab": "/koleskab.mp3",
+  "lampe": "/lampe.mp3",
+  "plante": "/plante.mp3",
+  "spejl": "/spejl.mp3",
+  "stol": "/stol.mp3",
+  "toilet": "/toilet.mp3",
+  "type": "/type.mp3"
 }
